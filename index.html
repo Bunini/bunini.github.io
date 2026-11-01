@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gmail-cleaner</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+  h1 { margin-bottom: .2rem; }
+  footer { margin-top: 2rem; font-size: .9rem; opacity: .8; }
+</style>
+</head>
+<body>
+<h1>gmail-cleaner</h1>
+<p><em>A personal, open-source tool that tidies a Gmail inbox safely.</em></p>
+
+<h2>What it does</h2>
+<p>gmail-cleaner is a small command-line program that runs on the owner's own Linux computer. It uses the Gmail API to find clutter, such as expired one-time passcodes, promotions, social-network notifications and old newsletters, and moves it to Gmail's Trash after a retention period that the user configures.</p>
+
+<h2>How it stays safe</h2>
+<ul>
+  <li>It previews matches first (dry-run) and only acts after explicit confirmation.</li>
+  <li>It moves messages to Trash only. It never deletes anything permanently.</li>
+  <li>It never touches starred or important mail, and it skips protected senders and subjects such as receipts and payment notices.</li>
+  <li>It reads only message headers (sender, subject, date, labels), never message bodies.</li>
+  <li>It runs entirely on the user's own computer. No data is sent to any server operated by the developer.</li>
+</ul>
+
+<h2>Google permissions used</h2>
+<p>The tool requests the Gmail permissions <code>gmail.readonly</code> (for previews) and <code>gmail.modify</code> (to move messages to Trash). See the <a href="privacy.html">Privacy Policy</a> for how Google user data is handled.</p>
+
+<footer>This tool is built for personal use by its developer. <a href="privacy.html">Privacy Policy</a></footer>
+</body>
+</html>
